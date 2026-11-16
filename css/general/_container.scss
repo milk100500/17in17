@@ -1,0 +1,27 @@
+@use "./mixins" as *;
+
+.container {
+  display: flow-root;
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  width: min(100% - 60px, 1400px);
+  margin-inline: auto;
+}
+
+/* MEDIA (START) */
+
+@include desktop {
+  .container {
+    width: min(100% - 60px, 1120px);
+  }
+}
+
+@include laptop {
+  .container {
+    width: calc(100% - 60px);
+    // width: min(100% - 48px, 865px);
+  }
+}
+
+/* MEDIA (END) */
